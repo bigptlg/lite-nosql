@@ -1,0 +1,35 @@
+{
+  "name": "lite-nosql",
+  "version": "1.0.0",
+  "description": "Embedded NoSQL document database for Node.js — no binaries, file-based, WAL + snapshot durability",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test test/*.test.js",
+    "test:watch": "node --test --watch test/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["nosql", "embedded", "database", "document-db", "filedb", "wal", "shared-hosting", "nodejs"],
+  "author": "Pedro de Oliveira",
+  "license": "MIT",
+  "engines": { "node": ">=18.0.0" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigptlg/lite-nosql.git"
+  },
+  "homepage": "https://github.com/bigptlg/lite-nosql#readme",
+  "bugs": {
+    "url": "https://github.com/bigptlg/lite-nosql/issues"
+  },
+  "devDependencies": {}
+}
